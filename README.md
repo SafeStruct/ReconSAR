@@ -61,8 +61,7 @@ The same synthetic points are used for both the grid-based and building-based an
 
 - **MATLAB** with support for `polyshape`, `centroid`, `inpolygon`, and `readmatrix` (recent releases; `readmatrix` needs R2019a+).
 - **Image Processing Toolbox** for `imgaussfilt` in the data generator only.
-- If your copy of the code uses the extension **`.m.txt`**, rename each file to **`.m`** (MATLAB only runs `.m` files).
-- **`data/buildings_2.mat`** is required for the building-based and building-density steps. It is not created by the generator; add it under `data/` if you use those scripts (the grid-only pipeline does not need it).
+- **`data/buildings_2.mat`** is required for the building-based and building-density steps. It is not created by the generator and is **not included in this Git repository** (file size). Add your own copy under `data/` if you use those scripts (the grid-only pipeline does not need it).
 
 **Workflow (run in this order)**
 
