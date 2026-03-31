@@ -1,4 +1,4 @@
-## MATLAB Change Detection (Synthetic Example)
+## ReconSAR
 
 This repository contains public MATLAB scripts that demonstrate earthquake-related change detection workflow using **fully synthetic** data. All inputs are anonymized and generated over a small, Kathmandu-like area.
 
