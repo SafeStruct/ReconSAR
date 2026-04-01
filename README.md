@@ -2,6 +2,15 @@
 
 This repository contains public MATLAB scripts that demonstrate earthquake-related change detection workflow using **fully synthetic** data. All inputs are anonymized and generated over a small, Kathmandu-like area.
 
+### Data files and Git LFS
+
+| File in `data/` | How it is stored |
+|-----------------|------------------|
+| `synthetic_ps.mat`, `synthetic_grid_2500m.mat` | Normal Git (small) |
+| **`buildings_2.mat`** | **Git LFS** (~157 MB). GitHub does not accept this file as a regular blob (100 MB limit); LFS stores the large binary separately. |
+
+After **clone**, install [Git LFS](https://git-lfs.com/) once (`git lfs install`), then run **`git lfs pull`** in the repo so `data/buildings_2.mat` is downloaded. If that file is missing locally, building-based scripts will fail.
+
 ### Reference
 
 The method implemented here follows the workflow described in:
@@ -32,7 +41,7 @@ The **`density`** column in `density_grid_synthetic.csv` is *D*<sub>grid</sub>; 
 - `src/`
   - `change_detection_grid_public.m`: performs grid-based change detection between `pre` and `post` by counting points per grid cell.
   - `change_detection_building_public.m`: performs building-based change detection between `pre` and `post` by counting points per building footprint.
-  - `density_grid_public.m`: computes *D*<sub>grid</sub>; column `density` in the output CSV is *D*<sub>Grid</sub> (synthetic `numBuildings` in this demo).
+  - `density_grid_public.m`: computes *D*<sub>grid</sub>; column `density` in the output CSV is *D*<sub>grid</sub> (synthetic `numBuildings` in this demo).
   - `density_building_public.m`: computes *D*<sub>building</sub>; column `density` in the output CSV is *D*<sub>building</sub> (uses footprint areas).
 - `results/`
   - Output CSV files with change detection results are written here.
@@ -61,7 +70,7 @@ The same synthetic points are used for both the grid-based and building-based an
 
 - **MATLAB** with support for `polyshape`, `centroid`, `inpolygon`, and `readmatrix` (recent releases; `readmatrix` needs R2019a+).
 - **Image Processing Toolbox** for `imgaussfilt` in the data generator only.
-- **`data/buildings_2.mat`** is required for the building-based and building-density steps. It is not created by the generator and is **not included in this Git repository** (file size). Add your own copy under `data/` if you use those scripts (the grid-only pipeline does not need it).
+- **`data/buildings_2.mat`** is required for the building-based and building-density steps. It is not created by the generator; it is **versioned via Git LFS** (see **Data files and Git LFS** above). After clone, run `git lfs pull` if the file is missing. The grid-only pipeline does not need it.
 
 **Workflow (run in this order)**
 
