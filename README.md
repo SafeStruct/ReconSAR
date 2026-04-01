@@ -114,7 +114,7 @@ Keep **MATLAB’s current folder** as indicated so paths like `../data` and `../
      - **`numBuildings` is not a file** here: the script generates a **synthetic** count per grid cell for this demo (for a real study, replace that logic with your vector of building counts per cell, as in the paper).
    - **Output:**
      - `results/density_grid_synthetic.csv`
-   - Columns: `ID`, `Xc`, `Yc`, `Nrpre`, `Nrpost`, `diff`, `numBuildings`, `density` (= *D*<sub>Grid</sub>).
+     - Columns: `ID`, `Xc`, `Yc`, `Nrpre`, `Nrpost`, `diff`, `numBuildings`, `density` (= *D*<sub>grid</sub>).
    - **`density_building_public.m`** — column `density` is *D*<sub>building</sub> (paper).
    - **Inputs** (read from `../results/` and `../data/`):
      - `results/change_detection_buildings_synthetic_diff.csv` — output of step 3
@@ -122,6 +122,10 @@ Keep **MATLAB’s current folder** as indicated so paths like `../data` and `../
    - **Output:**
      - `results/density_buildings_synthetic.csv`
    - Columns: `ID`, `Xc`, `Yc`, `Nrpre`, `Nrpost`, `diff`, `area`, `density` (= *D*<sub>building</sub>).
+
+### Funding
+
+P.M. (one of the contributors to this project) was funded by the **National Aeronautics and Space Administration (NASA)** under a contract with the **Commercial Smallsat Data Scientific Analysis Program** (**NNH22ZDA001N-CSDSA**), and the **Decadal Survey Incubation Program: Science and Technology** (**NNH21ZDA001N-DSI**).
 
 ### Notes
 
