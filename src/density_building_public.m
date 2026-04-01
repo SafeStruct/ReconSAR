@@ -3,7 +3,7 @@ clc; clear; close all;
 %
 % This script computes a simple density-like indicator per building using:
 %   - pre/post point counts and diff from change_detection_building_public.m
-%   - the footprint area of each building from buildings_2.mat
+%   - the footprint area of each building from buildings_2.mat (subset; see README)
 %
 % Inputs:
 %   - ../results/change_detection_buildings_synthetic_diff.csv

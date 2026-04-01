@@ -6,11 +6,9 @@ clc; clear; close all;
 % It is intended for public release and uses fully synthetic data.
 %
 % Inputs (from ../data):
-%   - synthetic_grid_points.mat : contains
-%       pre  [N x 3] (ID, X, Y)
-%       post [M x 3] (ID, X, Y)
-%   - buildings_2.mat : contains
-%       buildings : struct array with fields X, Y, osm_id
+%   - synthetic_ps.mat : pre, post [N x 3] (ID, X, Y)
+%   - buildings_2.mat : buildings (struct array X, Y, osm_id) — spatial subset
+%       of Kathmandu OSM footprints for public release (same schema as full data).
 %
 % Output (to ../results):
 %   - change_detection_buildings_synthetic_diff.csv
