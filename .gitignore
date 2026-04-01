@@ -4,6 +4,3 @@
 # OS
 .DS_Store
 Thumbs.db
-
-# Large OSM footprints — exceeds GitHub’s 100 MB limit; obtain locally (see README)
-data/buildings_2.mat
